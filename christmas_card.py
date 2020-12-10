@@ -378,7 +378,5 @@ t.right(90)
 t.forward(35)
 t.end_fill()
 
-
-# this will make a snowflake boarder
 wn = turtle.Screen()
 wn.mainloop()
