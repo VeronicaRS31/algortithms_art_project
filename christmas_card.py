@@ -1,9 +1,9 @@
 import turtle
 t=turtle.Turtle()
-t.speed(50)
+t.speed(50) # makes the turtle draw faster
 
 
-# this portion of code create the black background color
+# this portion of code creates the black background color
 def background_color(side_lenght):
   t.penup()
   t.goto(-400,400)
@@ -23,8 +23,8 @@ import time
 import random 
 snow_list=[]
 def snow_flake(radius):
-  x= random.randrange(-400,400)
-  y=random.randrange(-400,400)
+  x= random.randrange(-400,400) # this randomly pics the positon of the x aixs
+  y=random.randrange(-400,400)# this randomlly pics the position of the y axis
   snow_list.append([x, y])
   t.pencolor("white")
   t.penup()
@@ -35,6 +35,7 @@ def snow_flake(radius):
   t.circle(radius)
   t.end_fill()
 
+ # this daws the snow until there is more than 300 snow flakes
 while len(snow_list)<300 :
    for i in range(150):
        snow_flake(5)
@@ -66,7 +67,7 @@ diamonds=0
 xcor=-100
 ycor=-100
 
-list=[8,15,21,26,30,33,35]
+list=[8,15,21,26,30,33,35] # this is the list so that every time there is one less diamond in the tree
 
 while diamonds < 36:
   diamond_shape(20)
@@ -78,7 +79,7 @@ while diamonds < 36:
       t.pendown()
       xcor=xcor+10
       ycor=ycor+20
-
+# this writtes merry christmas on top of the drawings in the color pink
 t.penup()
 t.pencolor("Pink")
 t.goto(0,200)
@@ -103,7 +104,7 @@ for i in range(5):
   star(30)
 t.end_fill()
 
-# this piece of code creates the presents
+# this piece of code creates the decoration of boxes in the tree
 
 def square(side_lenght):
   t.begin_fill()
@@ -121,6 +122,7 @@ def rectangle(side_lenght):
     t.right(90)
   t.end_fill()
 
+  # this creates the tree trunk
 def tree_trunk():
   t.penup()
   t.goto(-50,-100)
@@ -170,9 +172,9 @@ def ornament_shape(radius):
   t.forward(20)
   t.pendown()
 
-
+# this puts the ornaments in the tree
 while ornaments < 35:
-  color_of_ornaments= random.choice(list_colors)
+  color_of_ornaments= random.choice(list_colors)# this makes random colors appear for the ornaments, it pciks color from the list of colors
   list_colors.remove(color_of_ornaments)
   t.fillcolor(color_of_ornaments)
   ornament_shape(5)
@@ -185,7 +187,7 @@ while ornaments < 35:
       xcor=xcor+10
       ycor=ycor+20
 
-
+# this allows for the user to type a message in and for the message to appear on the screen
 your_message=input("What message do you want to put inside your christmas card?, 10 words/less")
 
 t.penup()
@@ -195,6 +197,7 @@ t.pendown()
 message= your_message
 t.write(message, move=False, align="center", font=("Arial",20,"bold"))
 
+# this will create a snowman on the side of the christmas tree
 xcor= -200
 ycor=-150
 #snowman body
@@ -287,7 +290,7 @@ t.forward(5)
 t.right(90)
 t.forward(35)
 t.end_fill()
-
+ # the 2nd snowman
 xcor= 130
 ycor=-150
 rad=40
@@ -377,6 +380,6 @@ t.forward(5)
 t.right(90)
 t.forward(35)
 t.end_fill()
-
+ # dont touch, this allows for you to see the art
 wn = turtle.Screen()
 wn.mainloop()
