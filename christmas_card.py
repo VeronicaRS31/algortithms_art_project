@@ -67,7 +67,7 @@ diamonds=0
 xcor=-100
 ycor=-100
 
-list=[8,15,21,26,30,33,35] # this is the list so that every time there is one less diamond in the tree
+tree_list=[8,15,21,26,30,33,35] # this is the list so that every time there is one less diamond in the tree
 
 while diamonds < 36:
   diamond_shape(20)
