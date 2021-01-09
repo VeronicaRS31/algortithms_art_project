@@ -72,7 +72,7 @@ tree_list=[8,15,21,26,30,33,35] # this is the list so that every time there is o
 while diamonds < 36:
   diamond_shape(20)
   diamonds=diamonds+1
-  for item in list:
+  for item in tree_list:
     if diamonds== item:
       t.penup()
       t.goto(xcor+10,ycor+20)
